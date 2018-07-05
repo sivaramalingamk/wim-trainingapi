@@ -1,4 +1,7 @@
 package domain
 
-type vehicledata struct {
+type VehicleData struct {
+	ID        string `json:"id"`
+	longitude string `json:"longitude"`
+	latitude  string `json:"latitude"`
 }
