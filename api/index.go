@@ -1,6 +1,6 @@
 package api
 
-import "github.com/kataras/iris"
+import iris "github.com/kataras/iris"
 
 func Index() func(ctx iris.Context) {
 	return func(ctx iris.Context) {
