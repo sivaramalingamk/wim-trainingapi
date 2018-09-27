@@ -5,7 +5,7 @@ import iris "github.com/kataras/iris"
 func Index() func(ctx iris.Context) {
 	return func(ctx iris.Context) {
 		// Bind: {{.message}} with Message
-		ctx.ViewData("message", "WIM Training Landing API!")
+		ctx.ViewData("message", "WIM Training Landing API test ttttt!")
 		// Render template file: ./views/index.html
 		ctx.View("index.html")
 	}
