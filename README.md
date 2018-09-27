@@ -1,2 +1,2 @@
 About
-![description]( wim-trainingapi/git_img.jpg )
+![description]( https://github.com/sivaramalingamk/wim-trainingapi/git_img.jpg )
