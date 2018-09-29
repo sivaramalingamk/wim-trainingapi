@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/boniface/wim-trainingapi/api"
+
 	"github.com/kataras/iris"
+	"github.com/boniface/wim-trainingapi/api"
 )
 
 func main() {
@@ -11,8 +12,8 @@ func main() {
 	app.RegisterView(iris.HTML("./views", ".html"))
 	app.Get("/", api.Index())
 	app.Get("/user/{id:long}", api.ParamFunction())
-	app.Post("/eucdata", api.VehicleDataHandler)
-	app.Post("/eucdatacollection", api.VehicleDataCollectionHandler)
+	app.Post("/ecudata", api.VehicleDataHandler)
+	app.Post("/bulkecudata", api.VehicleDataCollectionHandler)
 	// Start the server using a network address.
 	app.Run(iris.Addr(":8080"))
 }
