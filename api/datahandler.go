@@ -6,7 +6,7 @@ import (
 )
 
 func VehicleDataHandler(ctx iris.Context) {
-	var data domain.VehicleData
+	var data domain.RawInputData
 
 	if err := ctx.ReadJSON(&data); err != nil {
 		ctx.StatusCode(iris.StatusBadRequest)
@@ -19,7 +19,7 @@ func VehicleDataHandler(ctx iris.Context) {
 
 // VehicleDataCollectionHandler reads a collection of VehicleData from JSON post body.
 func VehicleDataCollectionHandler(ctx iris.Context) {
-	var dataCollection []domain.VehicleData
+	var dataCollection []domain.RawInputData
 	err := ctx.ReadJSON(&dataCollection)
 
 	if err != nil {

@@ -1,23 +1,23 @@
 package domain
+
 //this is the output from training/ data merger app
 type TrainingData struct {
-	ID        string `json:"id"`
-	weight int `json:"weight"`
-	vehicleSpeed int `json:"vehicleSpeed"`
-	acceleration int `json:"acceleration"`
-	windSpeed int `json:"windSpeed"`
-	headingDirection int `json:"headingDirection"`
-	windDirection int `json:"windDirection"`
-	atmosphereTemp int `json:"atmosphereTemp"`
-	atmospherePressure int `json:"atmospherePressure"`
-	coolentTemp int `json:"coolentTemp"`
-	oilPressure int `json:"oilPressure"`
-	intakeAirTemp int `json:"intakeAirTemp"`
-	humidity int `json:"humidity"`
-	rpm int `json:"rpm"`
-	engineLoad int `json:"engineLoad"`
-	elevationAngle int `json:"elevationAngle"`
-	o2 int `json:"o2"`
-	fuelFlow int `json:"fuelFlow"`
-
+	ID                 string `json:"id"`
+	Weight             int    `json:"weight"`
+	VehicleSpeed       int    `json:"vehicleSpeed"`
+	Acceleration       int    `json:"acceleration"`
+	WindSpeed          int    `json:"windSpeed"`
+	HeadingDirection   int    `json:"headingDirection"`
+	WindDirection      int    `json:"windDirection"`
+	AtmosphereTemp     int    `json:"atmosphereTemp"`
+	AtmospherePressure int    `json:"atmospherePressure"`
+	CoolantTemp        int    `json:"coolantTemp"`
+	OilPressure        int    `json:"oilPressure"`
+	IntakeAirTemp      int    `json:"intakeAirTemp"`
+	Humidity           int    `json:"humidity"`
+	Rpm                int    `json:"rpm"`
+	EngineLoad         int    `json:"engineLoad"`
+	ElevationAngle     int    `json:"elevationAngle"`
+	O2                 int    `json:"o2"`
+	FuelFlow           int    `json:"fuelFlow"`
 }

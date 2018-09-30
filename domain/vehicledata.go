@@ -1,16 +1,17 @@
 package domain
+
 type VehicleData struct {
-	ID        string `json:"id"`
-	weight int `json:"weight"`
-	vehicleSpeed int `json:"vehicleSpeed"`
-	acceleration int `json:"acceleration"`
-	headingDirection int `json:"headingDirection"`
-	coolentTemp int `json:"coolentTemp"`
-	oilPressure int `json:"oilPressure"`
-	intakeAirTemp int `json:"intake_airTemp"`
-	rpm int `json:"rpm"`
-	engineLoad int `json:"engineLoad"`
-	elevationAngle int `json:"elevationAngle"`
-	o2 int `json:"o2"`
-	fuelFlow int `json:"fuelFlow"`
+	ID               string `json:"id"`
+	Weight           int    `json:"weight"`
+	VehicleSpeed     int    `json:"vehicleSpeed"`
+	Acceleration     int    `json:"acceleration"`
+	HeadingDirection int    `json:"headingDirection"`
+	CoolentTemp      int    `json:"coolentTemp"`
+	OilPressure      int    `json:"oilPressure"`
+	IntakeAirTemp    int    `json:"intake_airTemp"`
+	Rpm              int    `json:"rpm"`
+	EngineLoad       int    `json:"engineLoad"`
+	ElevationAngle   int    `json:"elevationAngle"`
+	O2               int    `json:"o2"`
+	FuelFlow         int    `json:"fuelFlow"`
 }
