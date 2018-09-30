@@ -9,3 +9,7 @@ go get -u gopkg.in/resty.v1
 
 `
 go get github.com/stretchr/testify`
+
+## Cassandra Access Libs 
+
+`go get github.com/gocql/gocql`
