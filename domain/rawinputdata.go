@@ -1,21 +1,20 @@
 package domain
 
 type RawInputData struct {
-	ID        string `json:"id"`
-	time string `json:"time"`
-	latitude string `json:"latitude"`
-	longitude string `json:"longitude"`
-	weight int `json:"weight"`
-	vehicleSpeed int `json:"vehicleSpeed"`
-	acceleration int `json:"acceleration"`
-	headingDirection int `json:"headingDirection"`
-	coolentTemp int `json:"coolentTemp"`
-	oilPressure int `json:"oilPressure"`
-	intakeAirTemp int `json:"intakeAirTemp"`
-	rpm int `json:"rpm"`
-	engineLoad int `json:"engineLoad"`
-	elevationAngle int `json:"elevationAngle"`
-	o2 int `json:"o2"`
-	fuelFlow int `json:"fuelFlow"`
-
+	ID               string `json:"id"`
+	Time             string `json:"time"`
+	Latitude         string `json:"latitude"`
+	Longitude        string `json:"longitude"`
+	Weight           int    `json:"weight"`
+	VehicleSpeed     int    `json:"vehicleSpeed"`
+	Acceleration     int    `json:"acceleration"`
+	HeadingDirection int    `json:"headingDirection"`
+	CoolentTemp      int    `json:"coolentTemp"`
+	OilPressure      int    `json:"oilPressure"`
+	IntakeAirTemp    int    `json:"intakeAirTemp"`
+	Rpm              int    `json:"rpm"`
+	EngineLoad       int    `json:"engineLoad"`
+	ElevationAngle   int    `json:"elevationAngle"`
+	O2               int    `json:"o2"`
+	FuelFlow         int    `json:"fuelFlow"`
 }
