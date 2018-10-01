@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/boniface/wim-trainingapi/domain"
 	"github.com/kataras/iris"
+	"github.com/sivaramalingamk/wim-trainingapi/domain"
 )
 
 func VehicleDataHandler(ctx iris.Context) {
