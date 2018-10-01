@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/boniface/wim-trainingapi/domain"
+	"github.com/sivaramalingamk/wim-trainingapi/domain"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/resty.v1"
 	"testing"

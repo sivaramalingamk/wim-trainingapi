@@ -2,8 +2,8 @@ package repository
 
 import (
 	"fmt"
-	"github.com/boniface/wim-trainingapi/domain"
 	"github.com/gocql/gocql"
+	"github.com/sivaramalingamk/wim-trainingapi/domain"
 )
 
 //ID               string `json:"id"`

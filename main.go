@@ -1,9 +1,8 @@
 package main
 
 import (
-
 	"github.com/kataras/iris"
-	"github.com/boniface/wim-trainingapi/api"
+	"github.com/sivaramalingamk/wim-trainingapi/api"
 )
 
 func main() {

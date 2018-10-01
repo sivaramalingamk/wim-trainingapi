@@ -1,6 +1,6 @@
 package services
 
-import "github.com/boniface/wim-trainingapi/domain"
+import "github.com/sivaramalingamk/wim-trainingapi/domain"
 
 func processVehicleData(data domain.VehicleData) {
 
