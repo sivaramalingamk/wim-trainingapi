@@ -6,15 +6,19 @@ import (
 )
 
 func VehicleDataHandler(ctx iris.Context) {
-	var data domain.RawInputData
+	var data domain.VehicleData
 
 	if err := ctx.ReadJSON(&data); err != nil {
 		ctx.StatusCode(iris.StatusBadRequest)
 		ctx.WriteString(err.Error())
+
 		return
 	}
 
-	ctx.Writef("Received: %#+v\n", data)
+	//ctx.Writef("Received mmmmmmmmmmm: %#+v\n", data)
+	//repository.AddVehicleData(data)
+	ctx.Writef("WRITING FROM VEHICLE DATA HANDLER", data.ID)
+
 }
 
 // VehicleDataCollectionHandler reads a collection of VehicleData from JSON post body.

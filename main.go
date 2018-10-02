@@ -10,7 +10,7 @@ func main() {
 	// Landing Page Display
 	app.RegisterView(iris.HTML("./views", ".html"))
 	app.Get("/", api.Index())
-	app.Get("/user/{id:long}", api.ParamFunction())
+	app.Get("/user/{id:int}", api.ParamFunction())
 	app.Post("/ecudata", api.VehicleDataHandler)
 	app.Post("/bulkecudata", api.VehicleDataCollectionHandler)
 	// Start the server using a network address.

@@ -24,7 +24,7 @@ var Session *gocql.Session
 
 func getCluster() *gocql.Session {
 	var err error
-	cluster := gocql.NewCluster("localhost")
+	cluster := gocql.NewCluster("155.238.156.52")
 	cluster.Keyspace = "vim"
 	Session, err = cluster.CreateSession()
 	if err != nil {
@@ -33,15 +33,15 @@ func getCluster() *gocql.Session {
 	return Session
 }
 
-func addVehicleData(data domain.VehicleData) domain.VehicleData {
+func AddVehicleData(data domain.VehicleData) {
 	fmt.Println(" **** Creating new data ****\n", data)
 	defer getCluster().Close()
-	if err := getCluster().Query("INSERT INTO vdata(id, name) VALUES(?, ?,?,?,?,?,?,?,?,?,?,?,?)",
-		data.ID, data.Acceleration).Exec(); err != nil {
-		fmt.Println("Error while inserting Emp")
+	if err := Session.Query("INSERT INTO vehicledata(id, weight) VALUES(?,?)", data.ID, data.Weight).Exec(); err != nil {
+
+		fmt.Println("Error while inserting Vehicle Data", err)
 		fmt.Println(err)
 	}
-	return data
+
 }
 
 func update(data domain.VehicleData) domain.VehicleData {
@@ -51,7 +51,7 @@ func update(data domain.VehicleData) domain.VehicleData {
 		Weight: data.Weight,
 	}
 	defer getCluster().Close()
-	if err := Session.Query("UPDATE vdata SET weight = ? WHERE ID = ?",
+	if err := Session.Query("UPDATE vehicledata SET weight = ? WHERE ID = ?",
 		updatedData.ID, updatedData.Weight).Exec(); err != nil {
 		fmt.Println("Error while updating Emp")
 		fmt.Println(err)
@@ -63,7 +63,7 @@ func update(data domain.VehicleData) domain.VehicleData {
 func deleteVehicleData(data domain.VehicleData) bool {
 	fmt.Println(" **** Deleting Person  ****\n", data)
 	defer getCluster().Close()
-	if err := Session.Query("DELETE FROM vdata WHERE id = ?", data.ID).Exec(); err != nil {
+	if err := Session.Query("DELETE FROM vehicledata WHERE id = ?", data.ID).Exec(); err != nil {
 		fmt.Println("Error while deleting Emp")
 		fmt.Println(err)
 	}

@@ -107,3 +107,32 @@ func TestIncomingRawDataCollection(t *testing.T) {
 	fmt.Println("The Result Collections is ", resp.Status())
 	assert.Equal(t, "200 OK", resp.Status())
 }
+
+/*
+var Session *gocql.Session
+
+
+func TestDBConnection(t *testing.T) {
+
+	var err error
+	cluster := gocql.NewCluster("155.238.156.52")
+	cluster.Keyspace="wim"
+	Session, err = cluster.CreateSession()
+	if err != nil {
+		t.Fatalf("0x%x: NewCluster: %v",  err)
+	}
+
+}
+
+func TestAddVehicleData(t *testing.T) {
+	var _ error
+	cluster := gocql.NewCluster("155.238.156.52")
+	cluster.Keyspace="wim"
+	Session, _ = cluster.CreateSession()
+	if err := Session.Query("INSERT INTO vehicledata(id, weight) VALUES(?,?)","21212",1122).Exec(); err != nil {
+		fmt.Println("Error while inserting Vehicle Data")
+		fmt.Println(err)
+	}
+	Session.Close()
+}
+*/
